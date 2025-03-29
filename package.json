@@ -5,7 +5,8 @@
   "source": "App.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel serve index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
