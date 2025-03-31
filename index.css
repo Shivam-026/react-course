@@ -48,7 +48,7 @@
 }
 
 .res-card:hover {
-    transform: scale(1.05);
+    transform: scale(0.95);
     box-shadow: 0 0 20px white;
     cursor: pointer;
   }
@@ -65,9 +65,35 @@
 .res-data {
     display: flex;
     flex-direction: column;
+    margin-left: 8px;
 }
 
 .filter-btn {
     margin: 5px;
     cursor: pointer;
+}
+
+.search-box{
+    margin-left: 10px;
+}
+
+.search-btn{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.res-name{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.rate-sla{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.rating{
+    margin-right: 14px;
+    font-family: bold;
 }
