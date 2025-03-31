@@ -1,8 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-
-
 const restDataVal = 
    [
                             {
@@ -1453,64 +1448,4 @@ const restDataVal =
                                 ]
 
 
-const AppHeader = ()=>(
-    <div className="header-container">
-    <div className="logo">
-        <img alt="food-logo" src="https://img.freepik.com/free-vector/food-shopping-logo-template-design_460848-10299.jpg?semt=ais_hybrid"/>
-    </div>
-    <div className="nav-menu">
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li> Cart</li>
-        </ul>
-    </div>
-    </div>
-)
-
-const ResCard = (props) => {
-    const {restData} = props
-    const {cloudinaryImageId,name,cuisines, avgRatingString } = restData?.info
-    return (
-    <div className="res-card">
-        <div className="res-img">
-            <img alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/"+cloudinaryImageId}/>
-        </div>
-        <div className="res-data">
-            <h2>{name}</h2>
-            <span>{cuisines.join(", ")}</span>
-            <span>{restData.info.sla.deliveryTime} min</span>
-            <span>{avgRatingString} ✩</span>
-        </div>
-    </div>
-    )
-}
-
-const AppBody = () => (
-    <div className="body-container">
-        <div className="search-box">Search Box</div>
-        <div className="res-container">
-            {restDataVal.map((restaurant) => (
-                <ResCard key = {restaurant.info.id} restData={restaurant} />
-            ))
-            }
-        </div>
-    </div>
-)
-
-
-
-
-
-
-const FoodAppContainet = () =>(
-    <div className="main-container">
-        <AppHeader/>
-        <AppBody/>
-    </div>
-)
-
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<FoodAppContainet/>);
+export default restDataVal;
