@@ -1,6 +1,7 @@
 
 import ResCard from "./ResCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 
 const AppBody = () => {
@@ -12,7 +13,7 @@ const [ inputValue, setInputValue] = useState("")
 
 useEffect(()=>{fetchData()},[])
 
-const proxyUrl = "https://api.allorigins.win/get?url=";
+const proxyUrl = "http://api.allorigins.win/get?url=";
 const targetUrl = encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.586409940195686&lng=85.15990152955055&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 const fetchData = async () => {
     const response = await fetch(proxyUrl + targetUrl);
@@ -40,7 +41,10 @@ return (
         </div>
         <div className="res-container">
             {searchFilterRestaurant.map((restaurant) => (
+                <Link to={"/reataurant/"+restaurant.info.id} >
                 <ResCard key = {restaurant.info.id} restData={restaurant} />
+                </Link>
+                
             ))
             }
         </div>

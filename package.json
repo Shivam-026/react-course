@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "source": "App.js",
+  
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
+
+    
   },
+  "targets": {
+  "default": {
+    "context": "browser",
+    "includeNodeModules": true
+  }
+},
   "repository": {
     "type": "git",
     "url": "(https://github.com/Shivam-026/react-course.git)"
@@ -19,7 +28,11 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.1",
+    "react-router-dom": "^7.5.1"
   },
-  "browserslist":["last 2 versions"]
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
